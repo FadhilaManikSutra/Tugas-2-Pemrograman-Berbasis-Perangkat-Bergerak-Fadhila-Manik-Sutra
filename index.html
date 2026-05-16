@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Cuaca Jakarta</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container">
+
+        <!-- HEADER -->
+        <div class="top-bar">
+
+            <div>
+                <h1>Cuaca Jakarta</h1>
+
+                <p class="subtitle">
+                    Data prakiraan suhu dari Open-Meteo API
+                </p>
+            </div>
+
+            <button id="theme-toggle">
+                🌙 Dark Mode
+            </button>
+
+        </div>
+
+        <!-- SUMMARY -->
+        <div class="summary-container">
+
+            <div class="summary-card">
+                <h3>Suhu Tertinggi</h3>
+                <p id="max-temp">-</p>
+            </div>
+
+            <div class="summary-card">
+                <h3>Suhu Terendah</h3>
+                <p id="min-temp">-</p>
+            </div>
+
+            <div class="summary-card">
+                <h3>Rata-rata</h3>
+                <p id="avg-temp">-</p>
+            </div>
+
+        </div>
+
+        <!-- SEARCH -->
+        <div class="search-container">
+
+            <input
+                type="text"
+                id="search-input"
+                placeholder="Cari jam... contoh 14:00"
+            >
+
+        </div>
+
+        <!-- LOADING -->
+        <div id="loading" class="loading">
+            Loading data cuaca...
+        </div>
+
+        <!-- ERROR -->
+        <div id="error-message" class="error-message hidden">
+            Gagal mengambil data cuaca.
+        </div>
+
+        <!-- TABLE -->
+        <div class="table-container">
+
+            <table>
+
+                <thead>
+                    <tr>
+                        <th>Tanggal & Waktu</th>
+                        <th>Suhu</th>
+                        <th>Status</th>
+                    </tr>
+                </thead>
+
+                <tbody id="weather-data">
+
+                </tbody>
+
+            </table>
+
+        </div>
+
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
